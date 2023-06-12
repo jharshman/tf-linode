@@ -1,6 +1,6 @@
 resource "linode_instance" "consul-server" {
   count            = var.num_servers
-  label            = "consul-{ count.index }"
+  label            = "consul-${count.index}"
   image            = var.os_image
   region           = "us-central"
   type             = var.machine_type
